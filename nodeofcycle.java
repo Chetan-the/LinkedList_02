@@ -28,5 +28,29 @@ public class nodeofcycle {
 
     }
 
+    //optimal solution was using slow and fast pointer
+    public node startcycle(node head){
+        if(head==null || head.next==null){
+            return null;
+        }
+        node entry=head;
+        node slow=head;
+        node fast=head;
+        while(fast.next!=null && fast.next.next!=null){
+            if(slow==fast)
+        {
+            while(slow!=entry){
+                entry=entry.next;
+                slow=slow.next;
+            }
+            return entry;
+
+        }   
+             slow=slow.next;
+            fast=fast.next.next;
+        }
+        return null;
+    }
+
     
 }
