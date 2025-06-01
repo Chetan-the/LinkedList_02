@@ -22,29 +22,25 @@ class meetingComparator implements Comparator<meeting>{
         }
         return 1;
     }
-
-   
 }
-public class numberofmeetings {
-    //if the meetings numbers are not in range then we can get the answer
+public class numberofmeetings{
     public void maxnoofmeetings(int[]start,int[]end){
-        //sort it based on end and then we return the answer
-       //here we are using custom class and sorting based on the end timings
-       ArrayList<meeting> ls=new ArrayList<>();
-       for(int i=0;i<start.length;i++){
+    ArrayList<meeting> ls=new ArrayList<meeting>();
+    for(int i=0;i<start.length;i++){
         ls.add(new meeting(start[i],end[i],i));
-       }
-       meetingComparator ms=new meetingComparator();
-       Collections.sort(ls,ms);
-       ArrayList<Integer> ans=new ArrayList<Integer>();
-       ans.add(ls.get(0).position);
-       int limit=ls.get(0).end;
-       for(int i=1;i<start.length;i++){
+    }
+    meetingComparator mc=new meetingComparator();
+    Collections.sort(ls,mc);
+    ArrayList<Integer> ans=new ArrayList<Integer>();
+    ans.add(ls.get(0).position);
+    int limit=ls.get(0).end;
+    for(int i=1;i<end.length;i++){
         if(ls.get(i).start>limit){
             limit=ls.get(i).end;
             ans.add(ls.get(i).position);
+
         }
-       }
     }
-    
+}
+
 }
