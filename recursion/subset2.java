@@ -7,7 +7,7 @@ public void  subset(int ind,int []arr,ArrayList<Integer> temp,ArrayList<ArrayLis
 anslist.add(new ArrayList<>(temp));
 
     for(int i=ind;i<n;i++){
-        if(i!=ind && arr[i]==arr[i-1]){
+        if(i>ind && arr[i]==arr[i-1]){
             continue;
         }
         temp.add(arr[i]);
