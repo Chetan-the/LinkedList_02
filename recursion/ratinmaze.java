@@ -48,5 +48,4 @@ public class ratinmaze{
         return ans;
     }
 
-
 }
