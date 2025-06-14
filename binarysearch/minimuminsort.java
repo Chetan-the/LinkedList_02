@@ -29,3 +29,4 @@ public class minimuminsort {
     
 }
 //to find the no of times the array is sorted we have to find the min value  index that is answer;
+//for that take an index variable and store in it
