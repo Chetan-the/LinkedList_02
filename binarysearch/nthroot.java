@@ -1,4 +1,4 @@
-package binarysearch;
+
 //we have to find the nth root of a number
 //we can solve  it by applying binary search bcz the values
 /*
