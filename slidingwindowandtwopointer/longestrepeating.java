@@ -31,7 +31,7 @@ public class longestrepeating {
     public int maxcons(String s,int k){
         int n=s.length();
         int l=0;
-        int r=n-1;
+        int r=0;
         int maxlen=0;
         int maxfreq=0;
         int[]hash=new int[26];
