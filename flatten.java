@@ -44,7 +44,7 @@ public class flatten{
 
     }
     public node flattennodes(node head){
-        if(head==null || head.next==null){
+        if(head== null || head.next==null){
             return head;
         }
         head.next=flattennodes(head.next);
